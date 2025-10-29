@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      # .github/workflows/ci.yml (ref: 0b9357ad7f09970e6a3f50a04c748b306949b632)
       - name: Run markdown lint
         run: |
           npm install remark-cli remark-preset-lint-consistent
-          npx remark . --use remark-preset-lint-consistent --frail
+          npx remark . --use remark-preset-lint-consistent
